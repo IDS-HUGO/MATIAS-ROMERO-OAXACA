@@ -1,0 +1,44 @@
+---
+import Base from '../layouts/Base.astro'
+import PhotoSlot from '../components/PhotoSlot.astro'
+const title = 'Origen de Matías Romero: los Llanos de Xochiapa y Rincón Antonio'
+const description = 'Antes de llamarse Matías Romero, la zona era conocida como los Llanos de Xochiapa y, después, como el rancho de Rincón Antonio. Conoce el origen del asentamiento.'
+---
+<Base
+  title={title}
+  description={description}
+  structuredData={{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Origen de Matías Romero: Llanos de Xochiapa y Rincón Antonio",
+    "description": description
+  }}
+>
+  <article>
+    <span class="badge badge-verde mb-3">Origen</span>
+    <h1 class="text-3xl md:text-4xl font-bold mt-0">Origen y primeros asentamientos</h1>
+    <p class="mt-4 lead">Mucho antes del ferrocarril y del nombre que conocemos hoy, esta zona del Istmo de Tehuantepec tuvo otra identidad: los Llanos de Xochiapa y, más tarde, el rancho de Rincón Antonio.</p>
+
+    <PhotoSlot caption="Paisaje de los Llanos de Xochiapa / entorno rural actual — pendiente" aspect="aspect-video" />
+
+    <h2 class="mt-8 text-xl font-semibold">Toponimia: Xochiapa, "en el agua de las flores"</h2>
+    <p class="mt-2 text-gray-700">El nombre más antiguo que se conoce para la región es de origen náhuatl: <strong>Xochiapa</strong> (también registrada como Suchiapa o Sochiapa). Se compone de <em>xochitl</em> ("flor") y <em>apa</em>, derivado de <em>atl</em> ("agua") y <em>pa</em> ("en"): literalmente, "en el agua de las flores". El nombre describe una comarca que, hace siglos, estaba rodeada de abundantes flores, pequeñas lagunas y riachuelos.</p>
+
+    <h2 class="mt-8 text-xl font-semibold">El rancho de Rincón Antonio</h2>
+    <p class="mt-2 text-gray-700">Durante el virreinato, familias zapotecas originarias de Santa María Petapa —municipio al que originalmente pertenecía esta zona— fundaron un pequeño rancho en lo que actualmente es la colonia Rincón Viejo. Con el paso del tiempo, ese asentamiento creció y se le conoció como <strong>Rincón Antonio Viejo</strong>.</p>
+    <p class="mt-2 text-gray-700">La vida en estos primeros núcleos giraba en torno a la tierra: cultivo de maíz y frijol, actividades de recolección y comercio regional a pequeña escala, aprovechando la posición del Istmo como corredor natural entre el Golfo de México y el Océano Pacífico.</p>
+
+    <h2 class="mt-8 text-xl font-semibold">De rancho a campamento ferrocarrilero</h2>
+    <p class="mt-2 text-gray-700">Todo cambió con el proyecto del Ferrocarril del Istmo de Tehuantepec. En 1904, durante el porfiriato, se estableció formalmente <strong>Rincón Antonio Nuevo</strong>: el área destinada al patio de maniobras, los talleres, la estación y las viviendas para los trabajadores ferrocarrileros. En apenas unos años, el antiguo rancho se transformó en un pueblo con trazado urbano moderno —calles alineadas, drenaje, mercado, hospital, escuelas— pensado enteramente para sostener la operación del ferrocarril transístmico.</p>
+    <p class="mt-2 text-gray-700">Este proceso culminó el <strong>8 de noviembre de 1906</strong>, cuando el Congreso del Estado de Oaxaca fundó oficialmente el municipio bajo un nuevo nombre: Matías Romero. La historia completa de esa transición está documentada en <a class="text-azul-enlace" href="/historia">Historia</a>.</p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+      <PhotoSlot caption="Colonia Rincón Viejo en la actualidad — pendiente" aspect="aspect-square" />
+      <PhotoSlot caption="Trazado original de calles y talleres ferroviarios — pendiente" aspect="aspect-square" />
+    </div>
+
+    <div class="callout mt-8">
+      <p class="text-sm text-gray-700 m-0">¿Tienes fotografías, mapas o testimonios sobre esta etapa fundacional? Nos ayudarían mucho a documentar mejor esta página — escríbenos desde <a class="text-azul-enlace font-medium" href="/contacto">Contacto</a>.</p>
+    </div>
+  </article>
+</Base>

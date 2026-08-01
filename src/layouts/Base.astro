@@ -1,0 +1,138 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+  structuredData?: Record<string, any>;
+}
+
+const siteName = 'Matías Romero, Oaxaca';
+const siteUrl = 'https://matias-romero-oaxaca.vercel.app/'; // TODO: reemplaza por tu dominio final al desplegar
+
+const {
+  title = `${siteName} — Historia y Cultura`,
+  description = 'Sitio informativo y cultural sobre Matías Romero, Oaxaca. Historia, cultura, Guelaguetza y archivos fotográficos.',
+  structuredData,
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, siteUrl).toString();
+---
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalURL} />
+
+    <!-- Open Graph / SEO social -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:site_name" content={siteName} />
+    <meta property="og:locale" content="es_MX" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="/imagenes/escudo.png" type="image/png" sizes="32x32">
+    <link rel="shortcut icon" href="/imagenes/escudo.png" type="image/png" sizes="32x32">
+    <link rel="apple-touch-icon" href="/imagenes/escudo.png" sizes="180x180">
+
+    {structuredData && (
+      <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+    )}
+  </head>
+  <body class="bg-blanco-pergamino text-negro-carbon antialiased">
+    <header class="border-b border-gray-200 bg-white">
+      <div class="max-w-6xl mx-auto p-4 flex items-center justify-between">
+        <a href="/" class="flex items-center gap-4">
+          <img src="/imagenes/escudo.png" alt="Escudo Matías Romero" class="h-12 w-12 object-contain" />
+          <div>
+            <h1 class="text-2xl font-serif text-azul-cielo">Matías Romero, Oaxaca</h1>
+            <p class="text-sm text-gray-600">Divulgación histórica y cultural — sin afiliación partidista</p>
+          </div>
+        </a>
+        <div class="flex items-center gap-4">
+          <button id="nav-toggle" aria-expanded="false" aria-controls="primary-nav" class="md:hidden p-2 rounded hover:bg-gray-100">
+            <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18M3 6h18M3 18h18"></path></svg>
+          </button>
+          <nav id="primary-nav" class="hidden md:block">
+            <ul class="flex gap-6 text-sm items-center">
+              <li><a class="text-azul-enlace hover:underline" href="/historia">Historia</a></li>
+              <li><a class="text-azul-enlace hover:underline" href="/cultura-guelaguetza">Guelaguetza</a></li>
+              <li><a class="text-azul-enlace hover:underline" href="/galeria">Galería</a></li>
+              <li><a class="text-azul-enlace hover:underline" href="/actualidad">Actualidad</a></li>
+              <li><a class="text-azul-enlace hover:underline" href="/fuentes">Fuentes</a></li>
+              <li><a class="text-azul-enlace hover:underline" href="/privacidad">Privacidad</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <!-- Mobile menu -->
+      <div id="mobile-menu" class="md:hidden hidden border-t border-gray-100">
+        <div class="max-w-6xl mx-auto p-4">
+          <ul class="flex flex-col gap-3 text-base">
+            <li><a class="text-azul-enlace block" href="/historia">Historia</a></li>
+            <li><a class="text-azul-enlace block" href="/cultura-guelaguetza">Guelaguetza</a></li>
+            <li><a class="text-azul-enlace block" href="/galeria">Galería</a></li>
+            <li><a class="text-azul-enlace block" href="/actualidad">Actualidad</a></li>
+            <li><a class="text-azul-enlace block" href="/fuentes">Fuentes</a></li>
+            <li><a class="text-azul-enlace block" href="/privacidad">Privacidad</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto p-6">
+      <slot />
+    </main>
+
+    <footer class="border-t border-gray-200 mt-12 bg-white">
+      <div class="max-w-4xl mx-auto p-6 text-sm text-gray-600">
+        <p>Proyecto de divulgación histórica y cultural. No afiliado a partido político alguno.</p>
+        <p class="mt-2">Créditos y fuentes en <a class="text-azul-enlace" href="/fuentes">/fuentes</a> · <a class="text-azul-enlace" href="/privacidad">Política de privacidad</a></p>
+      </div>
+    </footer>
+    <div id="privacy-banner" class="fixed bottom-4 left-4 right-4 md:left-auto md:right-12 md:bottom-6 max-w-xl mx-auto md:mx-0 bg-white border rounded shadow p-4 hidden z-50">
+      <div class="flex items-start gap-3">
+        <div class="flex-1 text-sm text-gray-800">Este sitio utiliza almacenamiento local para recordar tu aceptación de la <a class="text-azul-enlace" href="/privacidad">política de privacidad</a>. Al continuar aceptas su uso.</div>
+        <div class="flex items-center gap-2">
+          <button id="accept-privacy" class="px-3 py-1 rounded bg-azul-cielo text-white text-sm">Aceptar</button>
+        </div>
+      </div>
+    </div>
+    <script>
+      (function(){
+        try{
+          const accepted = localStorage.getItem('privacyAccepted');
+          const banner = document.getElementById('privacy-banner');
+          if(!accepted && banner) banner.classList.remove('hidden');
+          document.getElementById('accept-privacy')?.addEventListener('click', function(){
+            localStorage.setItem('privacyAccepted','1');
+            banner.classList.add('hidden');
+          });
+          // Mobile nav toggle
+          const navToggle = document.getElementById('nav-toggle');
+          const mobileMenu = document.getElementById('mobile-menu');
+          const primaryNav = document.getElementById('primary-nav');
+          if(navToggle && mobileMenu && primaryNav){
+            navToggle.addEventListener('click', function(){
+              const expanded = this.getAttribute('aria-expanded') === 'true';
+              this.setAttribute('aria-expanded', String(!expanded));
+              mobileMenu.classList.toggle('hidden');
+            });
+            // close mobile menu on navigation
+            mobileMenu.querySelectorAll('a').forEach(a=>a.addEventListener('click', ()=> mobileMenu.classList.add('hidden')));
+          }
+        }catch(e){console.error(e)}
+      })();
+    </script>
+  </body>
+</html>

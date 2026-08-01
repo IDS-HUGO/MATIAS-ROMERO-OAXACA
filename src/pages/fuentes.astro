@@ -1,0 +1,46 @@
+---
+import Base from '../layouts/Base.astro'
+const title = 'Fuentes y bibliografía — Matías Romero, Oaxaca'
+const description = 'Fuentes documentales, archivos y publicaciones consultadas para la investigación histórica de Matías Romero, Oaxaca.'
+
+const fuentes = [
+  { nombre: 'Matías Romero (Oaxaca) — Wikipedia', url: 'https://es.wikipedia.org/wiki/Mat%C3%ADas_Romero_(Oaxaca)', tipo: 'Enciclopedia' },
+  { nombre: 'Estación de Matías Romero — Wikipedia', url: 'https://es.wikipedia.org/wiki/Estaci%C3%B3n_de_Mat%C3%ADas_Romero', tipo: 'Enciclopedia' },
+  { nombre: 'Matías Romero Avendaño — Wikipedia', url: 'https://es.wikipedia.org/wiki/Mat%C3%ADas_Romero_Avenda%C3%B1o', tipo: 'Biografía' },
+  { nombre: 'Biografía de Matías Romero — Instituto Matías Romero, gob.mx', url: 'https://www.gob.mx/imr/acciones-y-programas/biografia-de-matias-romero-28454', tipo: 'Fuente oficial' },
+  { nombre: 'Matías Romero Avendaño — EcuRed', url: 'https://www.ecured.cu/Mat%C3%ADas_Romero_Avenda%C3%B1o', tipo: 'Enciclopedia' },
+  { nombre: 'Historia de Matías Romero, Oaxaca — Nuestro Istmo', url: 'http://nuestroistmo.com.mx/2021/01/16/06-Historia-de-Matias-Romero-Oaxaca/', tipo: 'Blog especializado' },
+  { nombre: 'Crónica de Matías Romero, Oaxaca — Nuestro Istmo', url: 'http://www.nuestroistmo.com.mx/2022/05/03/07-Cronica-de-Matias-Romero-Oaxaca/', tipo: 'Blog especializado' },
+  { nombre: 'Matías Romero: un pueblo ferrocarrilero — México Desconocido', url: 'https://www.mexicodesconocido.com.mx/matias-romero-un-pueblo-ferrocarrilero-oaxaca.html', tipo: 'Revista' },
+  { nombre: 'Matías Romero, ciudad con gran historia ferrocarrilera — NSS Oaxaca', url: 'https://nssoaxaca.com/2023/04/02/matias-romero-es-una-ciudad-con-una-gran-historia-por-la-industria-del-ferrocarril/', tipo: 'Medio local' },
+  { nombre: 'Matías Romero participó en la Guelaguetza de Ocotlán (2015)', url: 'http://expresionnoticias.blogspot.com/2015/08/matias-romero-participo-en-guelaguetza.html', tipo: 'Medio local' },
+  { nombre: 'Guelaguetza 2026: Lista de Delegaciones — Vive Oaxaca', url: 'https://www.viveoaxaca.org/2026/05/Delegaciones.html', tipo: 'Medio especializado en Guelaguetza' },
+  { nombre: 'Los negocios de un diplomático: Matías Romero en Chiapas — SciELO', url: 'https://www.scielo.org.mx/scielo.php?script=sci_arttext&pid=S1665-85742012000200006', tipo: 'Artículo académico' },
+]
+---
+<Base title={title} description={description}>
+  <article>
+    <span class="badge badge-verde mb-3">Fuentes</span>
+    <h1 class="text-3xl md:text-4xl font-bold mt-0">Fuentes y bibliografía</h1>
+    <p class="mt-4 lead">Este proyecto se construye a partir de fuentes documentales, enciclopédicas y periodísticas verificables. Cada afirmación histórica en el sitio puede rastrearse a alguna de las siguientes referencias. Si detectas un error o quieres sugerir una fuente adicional, escríbenos desde <a class="text-azul-enlace" href="/contacto">Contacto</a>.</p>
+
+    <div class="mt-8 grid grid-cols-1 gap-3">
+      {fuentes.map((f) => (
+        <a href={f.url} target="_blank" rel="noopener noreferrer" class="card p-4 flex items-center justify-between gap-4 hover:bg-blanco-pergamino">
+          <div>
+            <p class="font-medium text-negro-carbon m-0">{f.nombre}</p>
+            <span class="badge mt-2">{f.tipo}</span>
+          </div>
+          <span class="text-azul-enlace text-sm shrink-0">Ver fuente ↗</span>
+        </a>
+      ))}
+    </div>
+
+    <h2 class="mt-10 text-xl font-semibold">Metodología</h2>
+    <p class="mt-2 text-gray-700">Priorizamos fuentes con datos verificables y contrastamos fechas y hechos entre al menos dos referencias cuando fue posible. Cuando existieron discrepancias entre fuentes (por ejemplo, fechas exactas de fundación o nombramiento), optamos por la versión respaldada por el mayor número de fuentes independientes y lo señalamos explícitamente en el texto.</p>
+
+    <div class="callout mt-8">
+      <p class="text-sm text-gray-700 m-0">Este es un proyecto en construcción. Si eres historiador, cronista local o tienes acceso a archivos municipales, INEGI o INAH, tu colaboración puede mejorar sustancialmente la precisión de este sitio.</p>
+    </div>
+  </article>
+</Base>

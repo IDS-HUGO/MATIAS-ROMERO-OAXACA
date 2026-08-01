@@ -1,0 +1,18 @@
+---
+// Espacio reservado para una fotografía futura.
+// Cuando tengas la imagen real, reemplaza el <div class="photo-slot"> generado aquí
+// por: <img src="/imagenes/tu-foto.jpg" alt={caption} class={`photo-slot ${aspect}`} />
+interface Props {
+  caption: string;      // Descripción de qué foto va aquí (útil como futuro alt text)
+  aspect?: 'aspect-video' | 'aspect-square' | 'aspect-portrait';
+}
+const { caption, aspect = 'aspect-video' } = Astro.props;
+---
+<div class={`photo-slot ${aspect}`} role="img" aria-label={`Espacio reservado: ${caption}`}>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+    <rect x="3" y="5" width="18" height="14" rx="2"/>
+    <circle cx="9" cy="10" r="2"/>
+    <path d="M21 16l-5.5-5.5L11 15l-3-3-4 4"/>
+  </svg>
+  <span>{caption}</span>
+</div>

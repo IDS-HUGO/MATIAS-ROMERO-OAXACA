@@ -1,0 +1,53 @@
+---
+import Base from '../layouts/Base.astro'
+import PhotoSlot from '../components/PhotoSlot.astro'
+const title = '¿Quién fue Matías Romero Avendaño? Biografía del diplomático oaxaqueño'
+const description = 'Biografía de Matías Romero Avendaño (1837-1898): abogado oaxaqueño, colaborador de Benito Juárez, tres veces Secretario de Hacienda y primer embajador de México en Estados Unidos.'
+---
+<Base
+  title={title}
+  description={description}
+  structuredData={{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "¿Quién fue Matías Romero Avendaño?",
+    "description": description
+  }}
+>
+  <article>
+    <span class="badge badge-verde mb-3">Biografía</span>
+    <h1 class="text-3xl md:text-4xl font-bold mt-0">¿Quién fue Matías Romero Avendaño?</h1>
+    <p class="mt-4 lead">El municipio no adoptó este nombre al azar: honra a uno de los diplomáticos mexicanos más influyentes del siglo XIX, nacido en la propia ciudad de Oaxaca.</p>
+
+    <div class="flex flex-col md:flex-row gap-6 mt-6 items-start">
+      <div class="md:w-1/3 w-full">
+        <PhotoSlot caption="Retrato de Matías Romero Avendaño — pendiente" aspect="aspect-portrait" />
+      </div>
+      <div class="md:w-2/3 w-full">
+        <h2 class="text-xl font-semibold mt-0">Primeros años y formación</h2>
+        <p class="mt-2 text-gray-700">Matías Romero Avendaño nació el <strong>24 de febrero de 1837</strong> en la ciudad de Oaxaca de Juárez. Estudió en el Seminario de la Santa Cruz y después en el Instituto de Ciencias y Artes del Estado de Oaxaca, donde cursó primero filosofía y luego la carrera de abogado. En 1855, a los 18 años, se trasladó a la Ciudad de México e ingresó al Ministerio de Relaciones Exteriores como colaborador sin sueldo. Obtuvo su título de abogado en 1857.</p>
+      </div>
+    </div>
+
+    <h2 class="mt-10 text-xl font-semibold">Al servicio de Benito Juárez</h2>
+    <p class="mt-2 text-gray-700">Al estallar la Guerra de Reforma, Romero acompañó al presidente Benito Juárez como empleado del Ministerio de Relaciones Exteriores y fungió como secretario de Melchor Ocampo durante las negociaciones del tratado con Robert McLane. En 1859 llegó por primera vez a Washington D.C. para colaborar en la legación mexicana, donde en 1862 fue nombrado secretario y consultor jurídico. Desde ese cargo defendió la causa liberal mexicana ante la opinión pública estadounidense, especialmente durante la intervención francesa.</p>
+
+    <h2 class="mt-8 text-xl font-semibold">Décadas como representante de México en Washington</h2>
+    <p class="mt-2 text-gray-700">A lo largo de su carrera, Romero acumuló cerca de veinte años representando a México en Washington, sirviendo durante los gobiernos de Benito Juárez, Manuel González y Porfirio Díaz. Fue ministro plenipotenciario de 1882 a 1884 y nuevamente de 1893 a 1898. En 1883 impulsó un tratado comercial de reciprocidad entre México y Estados Unidos, en el que participó junto al general Ulysses S. Grant.</p>
+
+    <h2 class="mt-8 text-xl font-semibold">Secretario de Hacienda</h2>
+    <p class="mt-2 text-gray-700">Además de su labor diplomática, Matías Romero ocupó en tres ocasiones la Secretaría de Hacienda de México: de 1868 a 1872, de 1877 a 1879 y de 1892 a 1893. Sus ideas se orientaban hacia el liberalismo económico y el fortalecimiento de la infraestructura nacional, incluyendo el impulso a proyectos ferroviarios en el sur del país.</p>
+
+    <div class="callout mt-8">
+      <p class="text-sm text-gray-700 m-0"><strong>Por qué esto importa para Matías Romero, Oaxaca:</strong> el vínculo del diplomático con los proyectos ferroviarios del Istmo de Tehuantepec —y su cercanía con Porfirio Díaz— explica por qué la estación de Rincón Antonio adoptó su nombre en 1906. Este es un homenaje histórico, sin relación con la política partidista actual.</p>
+    </div>
+
+    <h2 class="mt-8 text-xl font-semibold">Primer embajador de México en Estados Unidos</h2>
+    <p class="mt-2 text-gray-700">En 1898, la legación mexicana en Washington fue elevada al rango de embajada, y Matías Romero fue designado como el primer Embajador Extraordinario y Plenipotenciario de México en Estados Unidos. Disfrutó poco del nuevo cargo: falleció ese mismo año en Nueva York, a los 61 años, a causa de una apendicitis.</p>
+
+    <h2 class="mt-8 text-xl font-semibold">Legado</h2>
+    <p class="mt-2 text-gray-700">Matías Romero es recordado como un diplomático hábil y persistente en un entorno internacional complejo, capaz de conjugar la defensa de la soberanía mexicana con una intensa actividad como promotor comercial y empresarial. Su nombre perdura hoy en instituciones como el Instituto Matías Romero —la academia diplomática del servicio exterior mexicano— y en el municipio de Matías Romero, Oaxaca, que documentamos en este sitio.</p>
+
+    <p class="mt-6 text-gray-700">Continúa explorando: <a class="text-azul-enlace" href="/historia">Historia del municipio</a> · <a class="text-azul-enlace" href="/origen-rincon-antonio">Origen: Rincón Antonio</a></p>
+  </article>
+</Base>

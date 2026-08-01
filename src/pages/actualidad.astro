@@ -1,0 +1,55 @@
+---
+import Base from '../layouts/Base.astro'
+import PhotoSlot from '../components/PhotoSlot.astro'
+const title = 'Actualidad — Noticias de Matías Romero, Oaxaca'
+const description = 'Últimas noticias y hallazgos sobre Matías Romero, Oaxaca: desde su debut en la Guelaguetza 2026 hasta eventos culturales y avisos de la comunidad.'
+
+// Agrega nuevas notas aquí arriba (más reciente primero). Cada objeto es una tarjeta de noticia.
+const posts = [
+  {
+    date: '2026',
+    badge: 'Cultura',
+    title: 'Matías Romero debuta por primera vez en el escenario oficial de la Guelaguetza',
+    body: 'Tras más de una década de gestiones y presentaciones en escenarios alternos como la Guelaguetza regional de Ocotlán (2015), la delegación de Matías Romero —conocida como las "Princesas del Istmo"— fue seleccionada para presentarse en el Auditorio Guelaguetza del Cerro del Fortín. El proceso de selección estuvo a cargo de consejeros interculturales que evaluaron la autenticidad y representatividad de la propuesta cultural del municipio. Este debut marca un antes y un después para el reconocimiento de la identidad matiasromerense dentro de la región del Istmo.',
+    link: '/cultura-guelaguetza',
+    linkLabel: 'Leer la historia completa de la Guelaguetza en Matías Romero →',
+  },
+  {
+    date: '2024',
+    badge: 'Patrimonio',
+    title: 'Se inaugura la nueva estructura de la estación del ferrocarril',
+    body: 'La estación de Matías Romero, construida originalmente como parte del Ferrocarril del Istmo de Tehuantepec bajo el nombre de Rincón Antonio, estrenó una nueva estructura. La estación sigue siendo uno de los símbolos más reconocibles del municipio, junto a la locomotora 535 que se conserva frente a ella.',
+    link: '/historia',
+    linkLabel: 'Ver la línea de tiempo completa →',
+  },
+]
+---
+<Base title={title} description={description}>
+  <article>
+    <span class="badge badge-nuevo mb-3">Actualidad</span>
+    <h1 class="text-3xl md:text-4xl font-bold mt-0">Actualidad</h1>
+    <p class="mt-4 lead">Notas breves sobre hallazgos históricos, eventos culturales y noticias recientes de Matías Romero, Oaxaca. Esta sección se actualiza conforme surgen novedades documentadas.</p>
+
+    <div class="mt-8 space-y-6">
+      {posts.map((post) => (
+        <div class="card news-card p-5 md:p-6">
+          <div class="flex items-center gap-3">
+            <span class="news-date">{post.date}</span>
+            <span class="badge">{post.badge}</span>
+          </div>
+          <h2 class="text-xl font-semibold m-0">{post.title}</h2>
+          <p class="text-gray-700 m-0">{post.body}</p>
+          <a class="text-azul-enlace font-medium hover:underline" href={post.link}>{post.linkLabel}</a>
+        </div>
+      ))}
+    </div>
+
+    <div class="mt-10">
+      <PhotoSlot caption="Foto del evento más reciente — pendiente" aspect="aspect-video" />
+    </div>
+
+    <div class="callout mt-8">
+      <p class="text-sm text-gray-700 m-0">¿Tienes una noticia, evento o hallazgo sobre Matías Romero que deberíamos documentar aquí? Escríbenos desde <a class="text-azul-enlace font-medium" href="/contacto">Contacto</a>.</p>
+    </div>
+  </article>
+</Base>

@@ -1,0 +1,51 @@
+---
+import Base from '../layouts/Base.astro'
+import PhotoSlot from '../components/PhotoSlot.astro'
+const title = 'Matías Romero en la Guelaguetza: las Princesas del Istmo'
+const description = 'La historia de la delegación de Matías Romero en la Guelaguetza de Oaxaca: el traje matiasromerense, las "Princesas del Istmo" y el camino hasta su debut en el Cerro del Fortín.'
+---
+<Base
+  title={title}
+  description={description}
+  structuredData={{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Matías Romero en la Guelaguetza",
+    "description": description
+  }}
+>
+  <article>
+    <span class="badge badge-oro mb-3">Cultura</span>
+    <h1 class="text-3xl md:text-4xl font-bold mt-0">Matías Romero en la Guelaguetza</h1>
+    <p class="mt-4 lead">La Guelaguetza es la fiesta más representativa de Oaxaca, y la región del Istmo de Tehuantepec —con sus huipiles de terciopelo bordado, su oro macizo y el ritmo inconfundible de la Zandunga— es una de sus imágenes más reconocibles en todo México. Matías Romero forma parte de esa identidad istmeña, aunque su camino hasta el escenario oficial fue largo.</p>
+
+    <PhotoSlot caption="Delegación de Matías Romero desfilando en la Guelaguetza — pendiente" aspect="aspect-video" />
+
+    <h2 class="mt-10 text-xl font-semibold">Las "Princesas del Istmo" y el traje matiasromerense</h2>
+    <p class="mt-2 text-gray-700">La representación cultural de Matías Romero es conocida popularmente como las <strong>"Princesas del Istmo"</strong>. Su traje se distingue por una manta clara con flores bordadas, en la que se mezclan influencias del bordado zapoteco y del mixe, en referencia a las raíces del pueblo ferrocarrilero fundado en Rincón Antonio. Este vestuario es distinto de otros trajes istmeños más conocidos —como el huipil de terciopelo de Tehuantepec o Juchitán— y refleja la identidad particular del municipio dentro de la región.</p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+      <PhotoSlot caption="Detalle del traje matiasromerense (bordado zapoteco-mixe) — pendiente" aspect="aspect-square" />
+      <PhotoSlot caption="Danza tradicional de la delegación — pendiente" aspect="aspect-square" />
+    </div>
+
+    <h2 class="mt-10 text-xl font-semibold">2015: el escenario alterno de Ocotlán</h2>
+    <p class="mt-2 text-gray-700">Durante años, Matías Romero buscó sin éxito un espacio en el escenario oficial de la Guelaguetza del Cerro del Fortín. En 2015, ante la falta de respuesta del Comité de Autenticidad, integrantes de la agrupación "Rincón Antonio" —en su mayoría maestros— presentaron sus danzas y trajes en la Guelaguetza regional de Ocotlán. Ese mismo año, niños de la escuela primaria "20 de Noviembre" sorprendieron a la comunidad presentando el traje matiasromerense en un evento local, como parte de un esfuerzo por fortalecer la identidad cultural del municipio.</p>
+
+    <h2 class="mt-10 text-xl font-semibold">2026: el debut en el Cerro del Fortín</h2>
+    <div class="card card-accent-oro p-5 md:p-6 mt-4">
+      <span class="badge badge-nuevo mb-2">Hallazgo reciente</span>
+      <p class="text-gray-700 m-0">La Guelaguetza reúne cada año a delegaciones de las ocho regiones de Oaxaca en el Auditorio del Cerro del Fortín, seleccionadas mediante un proceso de evaluación comunitaria y cultural encabezado por consejeros interculturales que visitan las comunidades antes de decidir su participación. Tras más de una década de intentos, en la <strong>Guelaguetza 2026</strong> el pueblo de Matías Romero llegó por primera vez a ese escenario oficial: un hito histórico para la identidad cultural del municipio, que por fin obtuvo el reconocimiento que había buscado durante años.</p>
+    </div>
+    <p class="mt-4 text-gray-700">Este debut no solo es un logro cultural: es también un reconocimiento a que la identidad de Matías Romero —nacida del cruce entre las tradiciones zapotecas y mixes originarias y la historia ferrocarrilera del municipio— es tan legítima y representativa del Istmo como la de otras poblaciones con más años de trayectoria en la fiesta. Amplía esta noticia en <a class="text-azul-enlace" href="/actualidad">Actualidad</a>.</p>
+
+    <PhotoSlot caption="Delegación de Matías Romero en el Auditorio Guelaguetza 2026 — pendiente" aspect="aspect-video" />
+
+    <h2 class="mt-10 text-xl font-semibold">Gastronomía y otras tradiciones</h2>
+    <p class="mt-2 text-gray-700">Más allá de la Guelaguetza, la vida cultural de Matías Romero se sostiene también en sus festividades patronales —como las fiestas de San Pedro y San Pablo, cada 28 de junio— y en una gastronomía marcada por la cocina istmeña: garnachas, totopos, tamales de iguana o de frijol, y bebidas tradicionales como el pozol. La transmisión de estos saberes entre generaciones es, junto con la danza, uno de los pilares de la identidad local.</p>
+
+    <div class="callout mt-8">
+      <p class="text-sm text-gray-700 m-0">¿Bailaste, participaste o tienes fotos de alguna presentación de la delegación de Matías Romero? Nos encantaría incluirlas aquí con tu crédito — escríbenos desde <a class="text-azul-enlace font-medium" href="/contacto">Contacto</a>.</p>
+    </div>
+  </article>
+</Base>

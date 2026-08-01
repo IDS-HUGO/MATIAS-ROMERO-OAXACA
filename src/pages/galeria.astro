@@ -1,0 +1,52 @@
+---
+import Base from '../layouts/Base.astro'
+import PhotoSlot from '../components/PhotoSlot.astro'
+const title = 'Galería fotográfica de Matías Romero, Oaxaca'
+const description = 'Archivo fotográfico histórico y contemporáneo de Matías Romero, Oaxaca: ferrocarril, centro de la ciudad, Guelaguetza y naturaleza del Istmo. Colabora enviando tus fotos.'
+
+const categorias = [
+  {
+    nombre: 'Ferrocarril histórico',
+    descripcion: 'Estación, talleres, locomotoras y el patrimonio ferroviario de Rincón Antonio.',
+    fotos: ['Estación de Rincón Antonio, ca. 1905', 'Talleres ferrocarrileros', 'Locomotora 535'],
+  },
+  {
+    nombre: 'Guelaguetza y cultura',
+    descripcion: 'Traje matiasromerense, danzas y la presentación de la delegación en el Cerro del Fortín.',
+    fotos: ['Traje de las Princesas del Istmo', 'Delegación en el Cerro del Fortín 2026', 'Fiestas de San Pedro y San Pablo'],
+  },
+  {
+    nombre: 'Centro de la ciudad',
+    descripcion: 'Vida urbana actual: mercado, parque central, casas de estilo inglés.',
+    fotos: ['Parque central y monumento al tren', 'Mercado municipal', 'Casas de estilo inglés'],
+  },
+  {
+    nombre: 'Istmo y naturaleza',
+    descripcion: 'Paisaje del Istmo de Tehuantepec y los alrededores del municipio.',
+    fotos: ['Llanos de Xochiapa', 'Río y vegetación local', 'Vista de los Chimalapas'],
+  },
+]
+---
+<Base title={title} description={description}>
+  <article>
+    <span class="badge badge-oro mb-3">Galería</span>
+    <h1 class="text-3xl md:text-4xl font-bold mt-0">Galería fotográfica</h1>
+    <p class="mt-4 lead">Este archivo está en construcción. Aquí reunimos —por categoría— el espacio para las fotografías históricas y actuales de Matías Romero. Si quieres colaborar con material, usa la sección de <a class="text-azul-enlace" href="/contacto">Contacto</a>; toda aportación se revisa y se acredita a quien la comparte.</p>
+
+    {categorias.map((cat) => (
+      <section class="mt-10">
+        <h2 class="text-xl font-semibold">{cat.nombre}</h2>
+        <p class="text-sm text-gray-600 mt-1">{cat.descripcion}</p>
+        <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+          {cat.fotos.map((foto) => (
+            <PhotoSlot caption={foto} aspect="aspect-square" />
+          ))}
+        </div>
+      </section>
+    ))}
+
+    <div class="callout mt-10">
+      <p class="text-sm text-gray-700 m-0"><strong>Nota técnica:</strong> cada espacio reservado corresponde a un componente <code>PhotoSlot</code> en <code>src/components/PhotoSlot.astro</code>. Para publicar una foto real, sustituye ese componente por una etiqueta <code>&lt;img&gt;</code> apuntando a un archivo dentro de <code>/public/imagenes/galeria/</code>, conservando el texto descriptivo como <code>alt</code> (esto también ayuda al posicionamiento en Google Imágenes).</p>
+    </div>
+  </article>
+</Base>

@@ -1,0 +1,87 @@
+---
+import Base from '../layouts/Base.astro'
+import PhotoSlot from '../components/PhotoSlot.astro'
+const title = 'Historia de Matías Romero, Oaxaca — De Rincón Antonio al presente'
+const description = 'Historia documentada de Matías Romero, Oaxaca: los Llanos de Xochiapa, el rancho de Rincón Antonio, la llegada del Ferrocarril Transístmico, el cambio de nombre en 1906 y su vida cultural contemporánea.'
+---
+<Base
+  title={title}
+  description={description}
+  structuredData={{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Historia de Matías Romero, Oaxaca",
+    "description": description,
+    "author": { "@type": "Organization", "name": "Proyecto de divulgación Matías Romero" }
+  }}
+>
+  <article>
+    <span class="badge badge-verde mb-3">Historia</span>
+    <h1 class="text-3xl md:text-4xl font-bold mt-0">Historia de Matías Romero, Oaxaca</h1>
+    <p class="mt-4 lead">De un pequeño rancho zapoteco en los Llanos de Xochiapa a un nudo ferroviario que unió el Golfo de México con el Pacífico, la historia de Matías Romero es, sobre todo, la historia de un pueblo construido alrededor de las vías del tren. Este recorrido reúne fuentes documentales y periodísticas; consulta <a class="text-azul-enlace" href="/fuentes">Fuentes</a> para la bibliografía completa.</p>
+
+    <PhotoSlot caption="Vista panorámica del centro de Matías Romero — pendiente" aspect="aspect-video" />
+
+    <h2 class="mt-10 text-2xl font-semibold">Línea de tiempo</h2>
+    <div class="timeline mt-6">
+      <div class="timeline-item">
+        <div class="timeline-year">Época virreinal</div>
+        <p class="text-gray-700">Familias zapotecas originarias de Santa María Petapa fundan un pequeño rancho en lo que hoy es la colonia Rincón Viejo. Con el tiempo, ese asentamiento se conocería como <strong>Rincón Antonio Viejo</strong>. La zona, conocida en náhuatl como <strong>Llanos de Xochiapa</strong> ("en el agua de las flores"), estaba rodeada de lagunas y riachuelos.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">1878 – 1882</div>
+        <p class="text-gray-700">Se aprueba el contrato para construir el Ferrocarril del Istmo de Tehuantepec. El 6 de noviembre de 1880 se fija el trazado de la línea, y el 30 de mayo de 1882 un decreto autoriza formalmente la construcción del ferrocarril transístmico que uniría Coatzacoalcos con Salina Cruz.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">1904</div>
+        <p class="text-gray-700"><strong>Rincón Antonio Nuevo</strong> es el nombre oficial que recibe el área fundacional ferrocarrilera —patio de maniobras, talleres, estación y viviendas para obreros— construida durante el porfiriato. En pocos años, el rancho se transforma en un pueblo ferrocarrilero con trazado urbano moderno: mercado, hospital, iglesia, escuelas y el célebre Casino Tehuantepec (con alberca, boliche y canchas de tenis).</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">8 de noviembre de 1906</div>
+        <p class="text-gray-700">El Congreso del Estado de Oaxaca emite el decreto número 6, mediante el cual se funda oficialmente el municipio y la población cambia su nombre a <strong>Matías Romero</strong>, en homenaje al diplomático oaxaqueño. Según la tradición local, la compañía ferroviaria Pearson preguntó al presidente Porfirio Díaz cómo debía llamarse la nueva estación; su respuesta fue: <em>"Estación Matías Romero Avendaño, Oaxaca"</em>.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">1928</div>
+        <p class="text-gray-700">La sede del gobierno municipal, que hasta entonces operaba desde Rincón Viejo, se traslada definitivamente a Matías Romero, consolidando a la nueva población como cabecera municipal.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">1930</div>
+        <p class="text-gray-700">Un incendio destruye el Casino Tehuantepec, uno de los edificios emblemáticos de la primera etapa ferrocarrilera, que además albergaba una de las dos escuelas primarias del pueblo.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">Siglo XX</div>
+        <p class="text-gray-700">El municipio se consolida institucionalmente: escuelas, unidades de salud, oficinas administrativas y mercados. La población crece con la llegada de familias de regiones cercanas atraídas por el trabajo ferroviario y la agricultura comercial del Istmo.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">2015</div>
+        <p class="text-gray-700">La agrupación "Rincón Antonio" presenta el traje y las danzas matiasromerenses en la Guelaguetza regional de Ocotlán, ante la falta de un espacio en el escenario oficial del Cerro del Fortín.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">2024</div>
+        <p class="text-gray-700">Se inaugura la nueva estructura de la estación del ferrocarril de Matías Romero, renovando uno de los símbolos más reconocibles del municipio.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">2026</div>
+        <p class="text-gray-700">Tras más de una década de gestiones, Matías Romero llega <strong>por primera vez</strong> al escenario oficial de la Guelaguetza en el Cerro del Fortín. Detalles en <a class="text-azul-enlace" href="/actualidad">Actualidad</a>.</p>
+      </div>
+    </div>
+
+    <h2 class="mt-10 text-2xl font-semibold">El ferrocarril: motor de cambio</h2>
+    <p class="mt-3 text-gray-700">El tendido ferroviario en el Istmo representó un punto de inflexión para la región. La llegada de las vías y las estaciones transformó la estructura económica y social: los talleres, las bodegas y las líneas de embarque generaron empleo y atrajeron población desde zonas circundantes. La economía local, antes centrada en la agricultura de subsistencia, se diversificó con oficios ligados al mantenimiento del ferrocarril y al comercio de transbordo entre el Golfo de México y el Pacífico.</p>
+    <p class="mt-3 text-gray-700">Hoy, la estación y varias casas de campo de estilo inglés construidas en esa etapa siguen en pie, junto con la "máquina 535", una locomotora que se conserva como monumento frente a la estación, símbolo del auge ferroviario de los años treinta.</p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+      <PhotoSlot caption="Estación del ferrocarril de Matías Romero, fachada actual — pendiente" aspect="aspect-square" />
+      <PhotoSlot caption="Locomotora 535, monumento frente a la estación — pendiente" aspect="aspect-square" />
+    </div>
+
+    <h2 class="mt-10 text-2xl font-semibold">Cambio de nombre: honor y memoria</h2>
+    <p class="mt-3 text-gray-700">La decisión de nombrar a la nueva población en honor a Matías Romero Avendaño forma parte de una tradición nacional de bautizar localidades con nombres de personajes históricos, como forma de memoria cívica. <strong>Este reconocimiento es histórico y simbólico, no una afiliación política contemporánea</strong>: este sitio tiene un enfoque exclusivamente cultural y documental. Puedes conocer más sobre el personaje histórico en <a class="text-azul-enlace" href="/quien-fue-matias-romero">¿Quién fue Matías Romero?</a></p>
+
+    <h2 class="mt-10 text-2xl font-semibold">Patrimonio material e inmaterial</h2>
+    <p class="mt-3 text-gray-700">El patrimonio de Matías Romero es tanto material —la estación, el trazado ferroviario, las casas de estilo inglés, la locomotora 535— como inmaterial: música, danzas, gastronomía y testimonios orales que se transmiten en las festividades. La conservación de este acervo enfrenta retos reales: degradación de infraestructura, pérdida de memoria oral por migración y escasez de recursos para restauración. Proyectos de archivo fotográfico y recopilación oral, como el que impulsa este sitio, son parte de la respuesta a esos retos.</p>
+
+    <h2 class="mt-10 text-2xl font-semibold">Referencias y lectura sugerida</h2>
+    <p class="mt-3 text-gray-700">Consulta <a class="text-azul-enlace" href="/fuentes">Fuentes</a> para la bibliografía y los archivos utilizados en este resumen. Si tienes materiales para compartir —fotografías, documentos, testimonios— escríbenos desde <a class="text-azul-enlace" href="/contacto">Contacto</a>.</p>
+  </article>
+</Base>

@@ -1,0 +1,36 @@
+---
+import Base from '../layouts/Base.astro'
+const title = 'Contacto — Matías Romero, Oaxaca'
+const description = 'Comparte fotografías, documentos, correcciones o testimonios sobre la historia de Matías Romero, Oaxaca.'
+---
+<Base title={title} description={description}>
+  <article>
+    <span class="badge badge-verde mb-3">Contacto</span>
+    <h1 class="text-3xl md:text-4xl font-bold mt-0">Contacto</h1>
+    <p class="mt-4 lead">Este proyecto crece con la colaboración de la comunidad. Si tienes fotografías históricas o actuales, documentos, testimonios orales, o si detectas algún error en la información, nos encantaría saber de ti.</p>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mt-8">
+      <div class="card card-accent p-5">
+        <h3 class="font-semibold mt-0">Fotografías y documentos</h3>
+        <p class="text-sm text-gray-600 mt-2">Ayúdanos a llenar los espacios reservados en <a class="text-azul-enlace" href="/galeria">Galería</a> con material histórico o actual.</p>
+      </div>
+      <div class="card card-accent-verde p-5">
+        <h3 class="font-semibold mt-0">Correcciones</h3>
+        <p class="text-sm text-gray-600 mt-2">¿Encontraste un dato impreciso en <a class="text-azul-enlace" href="/historia">Historia</a> u otra sección? Cuéntanos con detalle para revisarlo contra fuentes verificables.</p>
+      </div>
+      <div class="card card-accent-oro p-5">
+        <h3 class="font-semibold mt-0">Testimonios</h3>
+        <p class="text-sm text-gray-600 mt-2">Historias familiares, tradiciones orales o vivencias relacionadas con el municipio son bienvenidas.</p>
+      </div>
+    </div>
+
+    <div class="card p-6 mt-8">
+      <h2 class="text-xl font-semibold mt-0">Escríbenos</h2>
+      <p class="mt-2 text-gray-700">Puedes contactarnos directamente por correo electrónico:</p>
+      <a href="mailto:hugofranciscoluisinclan@gmail.com" class="mt-3 inline-flex items-center gap-2 bg-azul-cielo text-white font-semibold px-5 py-3 rounded-lg hover:opacity-90 transition">
+        hugofranciscoluisinclan@gmail.com
+      </a>
+      <p class="mt-4 text-sm text-gray-500">Todo material compartido será revisado y, en caso de publicarse, se citará su origen en <a class="text-azul-enlace" href="/fuentes">Fuentes</a> o se acreditará a quien lo aportó, salvo que se solicite lo contrario.</p>
+    </div>
+  </article>
+</Base>
